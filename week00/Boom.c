@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #define X_VALUE 5
 #define Y_VALUE 5
