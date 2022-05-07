@@ -1,8 +1,5 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
-
-/*e8 이윤지 20210804 컴퓨터학과 1학년*/
 
 void input(char arr[]) {
 	scanf("%s", arr);

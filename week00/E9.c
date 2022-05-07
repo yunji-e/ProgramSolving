@@ -1,7 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
-/*e9 ÀÌÀ±Áö 20210804 ÄÄÇ»ÅÍÇÐ°ú 1ÇÐ³â*/
 
 void input(int arr[], int n);
 int isEqual(int* a1, int* a2, int n);
@@ -16,9 +13,9 @@ int main(void) {
 	input(arr2, 5);
 
 	if (isEqual(arr1, arr2, 5))
-		printf("µÎ °³ÀÇ ¹è¿­Àº °°´Ù.\n");
+		printf("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.\n");
 	else
-		printf("µÎ °³ÀÇ ¹è¿­Àº ´Ù¸£´Ù.\n");
+		printf("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½ï¿½.\n");
 }
 
 void input(int arr[], int n) {

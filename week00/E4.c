@@ -1,7 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
-/*e4 ÀÌÀ±Áö 20210804 ÄÄÇ»ÅÍÇÐ°ú 1ÇÐ³â*/
 
 int searchKey(int arr[], int key);
 
@@ -20,9 +17,9 @@ int main(void) {
 	search = searchKey(arr, key);
 
 	if (search == 0)
-		printf("¾ø´Ù.\n");
+		printf("ï¿½ï¿½ï¿½ï¿½.\n");
 	else
-		printf("%d¹øÂ°¿¡ ÀÖ´Ù.\n", search + 1);
+		printf("%dï¿½ï¿½Â°ï¿½ï¿½ ï¿½Ö´ï¿½.\n", search + 1);
 }
 
 int searchKey(int arr[], int key) {

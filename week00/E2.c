@@ -1,7 +1,4 @@
 #include <stdio.h>
-#define _CRT_SECURE_NO_WARNINGS
-
-/*e2 이윤지 20210804 컴퓨터학과 1학년*/
 
 int isPrime(int n) {
 	int i;

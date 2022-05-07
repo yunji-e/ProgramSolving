@@ -1,7 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
-/*e3 юлю╠аЖ 20210804 ддг╩емгп╟З 1гпЁБ*/
 
 int total(int n) {
 	if (n == 1)
@@ -20,6 +17,6 @@ int main(void) {
 		if (n == -1)
 			break;
 
-		printf("1╨нем %d╠НаЖюг гую╨ %d\n", n, total(n));
+		printf("1О©╫О©╫О©╫О©╫ %dО©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ %d\n", n, total(n));
 	}
 }

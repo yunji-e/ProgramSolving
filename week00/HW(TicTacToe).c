@@ -1,6 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
 
 void display(char b[][3]) {
 	int i, j;
@@ -101,7 +99,7 @@ int main(void) {
 	do {
 		player = count % 2 == 0 ? 'X' : 'O';
 		display(board);
-		printf("Player %c(За ї­): ", player);
+		printf("Player %c(пїЅпїЅ пїЅпїЅ): ", player);
 		scanf("%d %d", &r, &c);
 		if (board[r][c] != ' ')
 			continue;

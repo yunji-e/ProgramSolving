@@ -1,7 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
-/*e1 이윤지 20210804 컴퓨터학과 1학년*/
 
 int pow(int n, int r) {
 	if (r == 1)
@@ -15,7 +12,6 @@ int pow(int n, int r) {
 		return n * midleV * midleV;
 	}
 }
-
 
 int main(void) {
 	int r;

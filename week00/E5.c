@@ -1,7 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
-/*e5 이윤지 20210804 컴퓨터학과 1학년*/
 
 int main(void) {
 	char str[100];

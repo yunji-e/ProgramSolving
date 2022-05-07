@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int arr[] = { 1,3,5,6,7,8,11,20,30 };
