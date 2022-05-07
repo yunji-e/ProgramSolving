@@ -1,0 +1,36 @@
+[탐색]
+1)unsorted array
+    -sequential search
+
+2)sorted array
+    -sequential search(순차탐색): 
+        탐색 성공 (n+1)/2, 탐색실패 n번
+        시간복잡도 O(n)
+    -binary search(이진탐색): 
+
+[review]
+#define MAX 100 //macro, 상수
+sizeof() //연산자
+printf("%d", p); //p는 주소
+printf("%d", p+1); //주소(다음칸)
+printf("%d", *p); //값 (p[0])
+printf("%d", *(p+1)); //값 (p[1])
+printf("%d", p[0]); //주소
+
+[동적 메모리 할당]
+1)정적 할당
+    -변수 선언을 통해 필요한 메모리 할당
+    -많은 양의 메모리는 배열 선언을 통해 할당
+
+2)동적 할당
+    -필요한 양이 예측되지 않을 경우
+    -실행중 운영체제로부터 할당-heap
+    -포인터pointer
+    -C: malloc()/free() 라이브러리 함수-<stdlib.h>
+        메모리 할당: int *p = (int*)malloc(sizeof(int)*2)); //p는 int형 2칸 배열 할당
+            -할당 실패시 p = 0
+                if(!p) {printf("메모리 할당 불가"); return 0;}
+        메모리 회수: free(p);
+            -동적할당하지 않은 p를 free하면 오류
+            -동일한 메모리 p를 두 번 반환하면 오류
+    -java: new연산자
