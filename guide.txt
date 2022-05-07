@@ -1,0 +1,13 @@
+c/c++ extension pack 설치
+
+뭐더라 뭐 다운, 경로 복사 C:\mingw64\bin\gcc.exe
+
+ctrl+shift+p
+c/c++ : edit configurations(UI)
+컴파일러 경로에 붙여넣기
+
+파일작성
+
+ctrl+shift+b
+빌드
+exe파일 생성
