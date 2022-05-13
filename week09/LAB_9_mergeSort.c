@@ -22,10 +22,10 @@ void merge(int A[], int p, int q, int r){
         t++;
     }
 
-    if(i>q)
+    if (i > q)
         for(;j<=r;j++, t++)
             B[t] = A[j];
-    else //j>r
+    else
         for(;i<=q;i++, t++)
             B[t] = A[i];
 

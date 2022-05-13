@@ -44,7 +44,7 @@ int main(void){
     list = (int*)malloc(sizeof(int)*n);
     for (i = 0; i < n; i++)
         list[i] = rand()%100;
-    //printList(list, 0, n-1);
+    printList(list, 0, n-1);
     quickSort(list, 0, n-1);
     printList(list, 0, n-1);
 
