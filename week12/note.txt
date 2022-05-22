@@ -1,0 +1,121 @@
+방학 때 백준 코딩 주 3-4개 이상 풀어보기
+
+gets(arr);
+ㄴ보안 이슈로 현재 사용하지 X
+fgets(arr(저장할 곳), n(읽을 길이), stdin(키보드입력));
+ㄴn개의 문자까지만 입력받음(한정)으로써 보안 이슈 해결
+
+LAB1
+-암호화
+void make_code(char* src, char* dest, int dist){
+    int i;
+    for(i = 0; i < 26; i++){
+        dest[i] = src[i] + dist;
+        if(dest[i] > 'Z')
+            dest[i] = dest[i] - 26;
+    }
+}
+
+void encoding(char* src, char* dest, char* code){
+    int i, str_len;
+
+    str_len = strlen(stc);
+    for(i = 0; i < str_len; i++){
+        if(src[i] >= 'A' && src[i] - 'A'){
+            int alpha_code = src[i] - 'A';
+            dest[i] - code[alpha_code];
+        }
+        else
+            dest[i] = src[i];
+    }
+}
+
+int main(void){
+    int dist, i;
+    char alpha[27] = "";
+    char code[27] = "";//암호화 테이블
+    char sentence[80] = "";//암호화할 문장
+    char encrypted_sentence[80] = ""//암호화된 문장
+
+    scanf("%d", &dist);//알파벳을 미는 키 값
+
+    for(i=0;i<26;i++)
+        alpha[i] = 'A'+i;
+
+    make_code(alpha, code, dist);
+
+    printf("ALPHABET\n);
+    printf("%s\n", alpha);
+    printf("%s\n", code);
+
+    printf("Enter a sentence to encode:");
+    //버퍼비우기(scanf는 공백기준으로 자르지만 
+    //fgets는 줄 단위(enter)->scanf로 잘리고 남은 \n이 들어가게 됨)
+    //또는 fflush(stdin); 사용(단, 운영체제마다 동작이 다를 수 있음)
+    fgets(sentence, 79, stdin); 
+    fgets(sentence, 79, stdin);
+    encoding(sentence, encrypted_sentence, code);
+    printf("ORIGINAL\n");
+    printf("%s", sentence);
+    printf("ENCRYPTED\n");
+    printf("%s", encrypted_sentence);
+
+    return 0;
+}
+
+
+LAB2 
+-file 입출력ver
+void make_code(char* src, char* dest, int dist){
+    int i;
+    for(i = 0; i < 26; i++){
+        dest[i] = src[i] + dist;
+        if(dest[i] > 'Z')
+            dest[i] = dest[i] - 26;
+    }
+}
+
+void encoding(char* src, char* dest, char* code){
+    int i, str_len;
+
+    str_len = strlen(stc);
+    for(i = 0; i < str_len; i++){
+        if(src[i] >= 'A' && src[i] - 'A'){
+            int alpha_code = src[i] - 'A';
+            dest[i] - code[alpha_code];
+        }
+        else
+            dest[i] = src[i];
+    }
+}
+
+int main(void){
+    int dist, i;
+    char alpha[27] = "";
+    char code[27] = "";
+    FILE *original_fp;
+    FILE *encrypted_fp;
+    char c;
+
+    scanf("%d", &dist);
+
+    for(i=0;i<26;i++)
+        alpha[i] = 'A'+i;
+
+    make_code(alpha, code, dist);
+
+    printf("ALPHABET\n);
+    printf("%s\n", alpha);
+    printf("%s\n", code);
+
+    original_fp = fopen("original.txt", "r");
+    encrypted_fp = fopen("encrypted.txt", "w");
+
+    fgets(sentence, 79, original_fp);
+    encoding(sentence, encrypted_sentence, code);
+    fputs(encrypted_sentence, encrypted_fp);
+
+    fclose(original_fp);
+    fclose(encrypted_fp);
+
+    return 0;

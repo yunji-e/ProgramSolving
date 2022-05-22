@@ -12,6 +12,36 @@ int isSequence(int a[], int size){
     return 1;
 }
 
+/*
+int calOperation(int *n1, int *n2, int k){
+    
+}
+int pick(int *items, int n, int* bucket, int* num1, int* num2){
+    int i, lastIndex, smallest, iteml
+    int result;
+    int opNum, min;
+    min = 1000;
+    opNum = 1000;
+    if(k == 0){
+        for(i = 0; i < bucketSize; i++)
+            num2[i] = num1[i] + items[bucket[i]];
+
+        if(isSequence(num2, bucketSize))
+            opNum = calOperation(num1, num2, bucketSize);
+    }
+
+
+    smallest = 0;
+
+    for(item = smallest; item < n; item++){
+        bucket[lastIndex+1] = item;
+        result = pick(itmes, n, bucket, bucketSize, k-1, num1, num2)
+    }
+
+    return min;
+}
+*/
+
 int pick(int A[], int item[], int n, int picked[], int m, int toPick, int min){
     int i;
     int ret;

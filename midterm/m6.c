@@ -46,6 +46,7 @@ int main(void){
     scanf("%d", &n);
     A = (int*)malloc(sizeof(int) * n);
     picked = (int*)malloc(sizeof(int) * n);
+    //계산결과 저장용 동적할당배열 하나 더 할당하고 사용하는게 나음
     for (i = 0; i < n; i++)
         scanf("%d", &A[i]);
 
