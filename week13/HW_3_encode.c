@@ -66,6 +66,9 @@ int main(void){
     char encodedSentence[80];
     char decodedSentence[80];
     int dist;
+    char fileNameIn[30];
+    char fileNameOut[30];
+    FILE *in, *out;
 
     printf("Enter a word to use for encoding: ");
     scanf("%s", key);
@@ -77,15 +80,27 @@ int main(void){
     printCode(code);
 
     fflush(stdin);
-    printf("Enter a sentence to encode: ");
-    fgets(sentence, sizeof(sentence), stdin);
+    printf("File in: ");
+    scanf("%s", fileNameIn);
+    printf("File out: ");
+    scanf("%s", fileNameOut);
 
-    printf("original sentence:\t");
-    printf("%s", sentence);
+    if((in = fopen(fileNameIn, "r"))==NULL){
+        printf("File open error 1");
+    }
+    if((out = fopen(fileNameOut, "w"))==NULL){
+        printf("File open error 2");
+    }
 
-    encode(code, sentence, encodedSentence);
-    printf("encoded sentence:\t");
-    printf("%s", encodedSentence);
+    while(fgets(sentence, sizeof(sentence), in)!=NULL){
+        encode(code, sentence, encodedSentence);
+        fputs(encodedSentence, out);
+        memset(sentence, '\0', 80);
+        memset(encodedSentence, '\0', 80);
+    }
+
+    fclose(in);
+    fclose(out);
 
     return 0;
 }
